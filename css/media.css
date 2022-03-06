@@ -1,0 +1,184 @@
+/*když prohlédnout projekt překrývá nápis - border s fade out transititon nebo menší/větší průsvitnost*/
+@media(max-width:1200px){
+    .excercise-buttons {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .excercise-button {
+        display: block;
+        margin: 0 0 8px 0;
+
+    }
+}
+
+@media(max-width:1100px){
+    .project-box{
+        width: 90vw;
+        height: 450px;
+    }
+    .project-box .img-wrapper {
+        width: 50%;
+    }
+    .project-box .img-wrapper img {
+        width: 70%;
+    }
+    .project-box .project-info {
+        width: 50%;
+    }
+  
+    .excercise-button {
+        width: 55px;
+    }
+    .excercise-button svg {
+        display: none;
+    }
+}
+@media(max-width:900px){
+    #excercises .excercise-info {
+        width: 100%;
+}
+#excercises .img-wrapper {
+        display: none;
+    }
+}
+@media (max-width:860px){
+    html {
+        font-size: 14px;
+    }
+    .home-center {
+        width:80vw;
+    }
+    #home .title {
+        font-size: 5rem;
+        word-spacing: 7px;
+    }
+    #home .grafic-text {
+        font-size: 1.6rem;
+        line-height: 1;
+
+    }
+    .hoverEffect * {
+        transform: translateY(-29px);
+    }
+
+    .project, .project:nth-child(even) {
+        display: block;
+        width: 60vw;
+        height: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .projects-title, .projects-text {
+        margin-left: 8%;
+    }
+    .project img {
+        width:40%;
+    }
+    .project:hover img {
+        width:45%;
+    } 
+}
+@media (max-width:720px){
+    .project-box{
+        width: 380px;
+        height: 650px;
+    }
+    .project-box .img-wrapper {
+        display: block;
+        width: 100%;
+        height: 30%;
+
+    }
+    .project-box .img-wrapper img {
+        height: 50%;        
+    }
+    .project-box .project-info {
+        float: none;
+        width: 100%;
+        height: 70%;
+    }
+    .close-project{
+        width:30px;
+    }
+    .close-project::before, .close-project::after {
+        width: 20px;
+        height: 5px;
+    }
+    .close-project::before {
+        transform: translateY(20px) rotateZ(45deg);
+    }
+    .close-project::after {
+        transform: translateY(20px) rotateZ(-45deg);
+    }
+}
+@media (max-width:640px){
+    #home .title {
+        font-size: 3rem;
+        margin-bottom: 20px;
+
+    }
+
+    #home .grafic-text {
+        font-size: 1.3rem;
+    }
+    .word {
+        height: 1.3rem;
+    }
+    .hoverEffect * {
+        transform: translateY(-1.8rem);
+    }
+
+    .project, .project:nth-child(even) {
+        width: 80vw;
+        height: 54vw;
+    }
+    .projects-title, .projects-text {
+        margin-left: 0;
+    }
+    .projects-title {
+        font-size: 3rem;
+    }
+
+    /*----*/
+
+    #excercises .excercise {
+        width: 380px;
+        height: 540px;
+        margin: 50px auto 30px auto;
+    }
+    #excercises .img-wrapper {
+        display: block;
+        width: 100%;
+        height: 40%;
+
+    }
+    #excercises .img-wrapper img {
+        width: 35%;        
+    }
+    #excercises .excercise-info {
+        width: 100%;
+        height: 60%;
+    }
+
+    #excercises .excercise-buttons {
+        position: absolute;
+        top: initial;
+        right: initial;
+        bottom: -50px;
+    }
+
+    #excercises .excercise-button {
+        display: inline-block;
+        width: 80px;
+    }
+    #excercises .excercise-button svg {
+        display: inline-block;
+    }
+    #excercises .demo {
+        margin-right: 10px;
+
+    }
+}  
+

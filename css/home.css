@@ -1,0 +1,121 @@
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+#home {
+    display: block;
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+    cursor: default;
+}
+.home-center {
+    position: absolute;
+    width: 860px; 
+    top: 55%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    animation: rotation .4s ease-out forwards;
+}
+
+@keyframes rotation {
+    0% {
+        opacity: 0;
+        transform-origin: 50% 100%;
+        transform: translate(-50%,-50%) rotateZ(45deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%,-50%) rotateZ(0deg);
+    }
+}
+
+#home .title {
+    display: block;
+    position: relative;
+    font-size: 5.5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    margin-bottom: 5px;
+}
+
+#home .grafic-text {
+    display: block;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 1.1;
+}
+.word {
+    display: inline-block; /*not necessary*/
+    position: relative;
+    height: 26px; /*POZOR - GRAFIC-TEXT JE V JEDNOTKÁCH REM!*/
+    margin-bottom: 7px;
+    overflow: hidden;
+}
+
+
+.word-hover-1{
+    display: block;
+    margin-bottom: 7px;
+    color: #94a4b4;
+}
+
+.word-hover-2{
+    display: block;
+    visibility: visible;
+    color: #5b6570;
+}
+
+.hoverEffect * {
+    transition: transform 0.25s ease-in-out;
+    transform: translateY(-33px);
+}
+
+.hoverEffectDeactive * {
+    transition: transform 0.25s ease-in-out;
+    transform: translateY(0px);
+}
+
+.center {
+    display: block;
+    position: relative;
+}
+#view-projects{  /* PÍSMO RESPONZIVNÍ, BTN WIDTH NE! */ 
+    display: block;
+    width: 120px; /* - je v pohodě mít neresponzivní prvky?*/
+    height: 45px;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 5rem;    /*má tu být margin, když position relative?*/
+    overflow: hidden;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    border: white 2px solid;
+
+    cursor: pointer;
+}
+#view-projects:hover * {
+    transition: transform 0.15s ease-in-out;
+    transform: translateY(-45px); /*NERESPONZIVNÍ!!!! */
+}
+#view-projects:not(:hover) * {
+    transition: transform 0.15s ease-in-out;
+    transform: translateY(0px); /*NERESPONZIVNÍ!!!! */
+}
+#view-projects div:last-child{
+    background-color: white;
+    color: black;
+}

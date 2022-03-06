@@ -1,0 +1,124 @@
+#projects {
+    display: block;
+    position: relative;
+
+    width: 100vw;
+    max-width:100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+.wrapper{
+    width: 80vw;
+    height: auto;
+    padding-top: 100px;
+    margin: auto;
+}
+
+.projects-title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.projects-text {
+    font-size: 0.9rem;
+    font-family: Lucida;
+    color: #94a4b4;
+}
+
+.projects-title, .projects-text {
+    transition: margin .2s linear;
+}
+
+.projects-wrapper {
+    display: block;
+    width: 75vw;
+    height: auto;
+    margin-top: 4rem;
+}
+
+.project {
+    position: relative;
+    display: inline-block;
+    width: calc((75vw - 50px)/2); /*50 - margine right and box shadow asi?*/
+    height: 21vw;
+    margin-right: 45px;  /*REM? OPRAVDU?*/
+    margin-bottom: 45px;
+    background-color: #23232b; /*#222327;*/
+    box-shadow: 0px 0px 5px 1px black;
+
+    transition: width .2s linear, height .3s linear;
+}
+
+.project:hover {
+    background-color: black;
+}
+
+.project img {
+    position: absolute;
+    width: 14vw;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: width .1s linear;    
+}
+
+.project:hover img {
+    width: 16vw;
+    height: auto;
+}
+
+.project button {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+    padding: 4px 20px;
+    border-radius: 3px;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: RakeslyRg;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.project button svg {
+    position: relative;
+    width: auto;
+    height: 18px;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.project:hover button {
+    opacity: 1;
+}
+
+.project button:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.project:nth-child(even) {   /* první prohlížení translate zprava vjezd o 10px cca, odd zase zleva*/
+    margin-right: 0;
+}
+
+
+@keyframes fromTop {
+    0% {transform: translateY(-100px);
+    opacity: 1;}
+    100% {transform: translateY(0px);}
+}
+@keyframes fromLeft {
+    0% {transform: translateX(-60px);}
+    100% {transform: translateX(0px);
+    opacity: 1;}
+}
+@keyframes fromRight {
+    0% {transform: translateX(60px);}
+    100% {transform: translateX(0);
+    opacity:1;}
+}

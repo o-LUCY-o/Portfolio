@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work in progress</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+        html{
+            overflow: hidden;
+            font-family: 'Bree Serif', serif;
+        }
+        .screen {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        .wrapper {
+            position: absolute;
+            width: 50vw;
+            top:0%;
+            left:50%;
+            transform: translateX(-50%);
+        }
+        p{
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 60px;
+        }
+        img{
+            width: 50vw;
+            max-width: 800px;        
+        }
+        a {position: absolute;
+            bottom: 15px;
+            right: 20px;
+          display: block;
+          font-size: 14px;
+          color: #94a4b4;
+        }
+        @media (max-width:830px){
+            .wrapper{
+                left: 0;
+                transform: translateX(0%);
+                width: 90vw;
+            }
+            p{
+                font-size: 5vw;
+            }
+            img {
+                width:90vw;
+            }
+            a{
+                font-size: 10px;
+            }
+        }
+
+    </style>
+    <div class="screen">
+        <div class="wrapper">
+            <p>Work in progress</p>
+            <img src="/img/work-in-progress.gif" alt="Prehistoric & electricity - zdroj: https://i.imgur.com/O99wgMz.gif"/>
+        </div>
+        <a href="https://i.imgur.com">zdroj obrázku</a>
+
+    </div>
+</body>
+</html>
