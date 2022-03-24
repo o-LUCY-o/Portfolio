@@ -1,0 +1,97 @@
+#excercises {
+    display: none;
+    position: relative;
+
+    width: 100vw;
+    max-width:100%;
+    height: auto;
+    min-height: 100vh;
+
+    .wrapper{
+        width: 80vw;
+        height: auto;
+        padding-top: 100px;
+        margin: auto;
+
+        .excercises-title{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+
+            transition: margin .2s linear,  opacity .2s linear;
+        }
+        .excercises-text {
+            font-size: 0.9rem;
+            font-family: Lucida;
+            color: #94a4b4;
+            line-height: 1.5;
+
+            transition: margin .2s linear;
+        }
+        .excercises-wrapper {
+            display: block;
+            width: 75vw;
+            height: auto;
+            margin-top: 4rem;
+        
+            .excercise {
+                position: relative;
+                display: inline-block;
+                width: calc((75vw - 150px)/3); /*50 - margine right and box shadow asi?*/
+                height: 15vw;
+                margin-right: 45px;  /*REM? OPRAVDU?*/
+                margin-bottom: 45px;
+                background-color: #23232b; /*#222327;*/
+                box-shadow: 0px 0px 5px 1px black;
+            
+                transition: width .2s linear, height .3s linear;
+                
+                &:hover {
+                    background-color: black;
+                    img {
+                        width: 45%;
+                        height: auto;
+                    }
+                    button {
+                        opacity: 1;
+                    }
+                }
+                img {
+                    position: absolute;
+                    width: 40%;
+                    height: auto;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    transition: width .1s linear;    
+                }
+                button {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 25px;
+                    transform: translateX(-50%);
+                    padding: 4px 20px;
+                    border-radius: 3px;
+                    opacity: 0;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    font-family: RakeslyRg;
+                    font-size: 17px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.945);
+                    }
+                    svg {
+                        position: relative;
+                        width: auto;
+                        height: 16px;
+                        align-items: center;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,50 +1,51 @@
 /*když prohlédnout projekt překrývá nápis - border s fade out transititon nebo menší/větší průsvitnost*/
-@media(max-width:1200px){
-    .excercise-buttons {
-        position: relative;
-        top: 0;
-        right: 0;
-    }
-    .excercise-button {
-        display: block;
-        margin: 0 0 8px 0;
 
-    }
+
+
+@media(max-width:1250px){
+    #excercises .wrapper .excercises-wrapper .excercise svg {
+        display: none;
+    } 
 }
-
 @media(max-width:1100px){
-    .project-box{
+    .project-box-wrapper .project-box, .excercise-box-wrapper .excercise-box {
         width: 90vw;
         height: 450px;
     }
-    .project-box .img-wrapper {
+    .project-box .img-wrapper, .excercise-box .img-wrapper {
         width: 50%;
     }
-    .project-box .img-wrapper img {
+    .project-box .img-wrapper img, .excercise-box .img-wrapper img  {
         width: 70%;
     }
-    .project-box .project-info {
+    .project-box .project-info, .excercise-box .excercise-info {
         width: 50%;
     }
-  
-    .excercise-button {
-        width: 55px;
-    }
-    .excercise-button svg {
-        display: none;
+   
+    .project-box-wrapper .project-box .img-wrapper img {
+        width: 70%;
     }
 }
-@media(max-width:900px){
-    #excercises .excercise-info {
-        width: 100%;
-}
-#excercises .img-wrapper {
-        display: none;
-    }
-}
+
+
+
+
 @media (max-width:860px){
     html {
         font-size: 14px;
+    }
+
+    #contact .contact-wrapper {
+        left: -154px;
+    }
+
+    #contact .contact-wrapper a {
+        padding: 10px;
+        height: 50px;
+    }
+    #contact .contact-wrapper a span {
+        line-height: 2.4;
+
     }
     .home-center {
         width:80vw;
@@ -70,31 +71,69 @@
         margin-right: auto;
     }
 
-    .projects-title, .projects-text {
+    .projects-title, .projects-text, .excercises-title, .excercises-text {
         margin-left: 8%;
     }
-    .project img {
+    .project img, .excercises img {
         width:40%;
     }
-    .project:hover img {
+    .project:hover img, .excercises:hover img {
         width:45%;
     } 
+    .excercises-wrapper {
+        padding-left: 8%;
+
+    }
+    #excercises .wrapper .excercises-wrapper .excercise {
+        width: 27vw;
+        height: 20vw;
+    }
+    #excercises .wrapper .excercises-wrapper .excercise:nth-child(odd) {
+        animation: fromLeft .4s linear 0.2s forwards;
+    }
+    #excercises .wrapper .excercises-wrapper .excercise:nth-child(even) {
+        animation: fromRight .4s linear 0.2s forwards;
+    }
+
+
 }
 @media (max-width:720px){
-    .project-box{
+
+    #contact .contact-wrapper {
+        top: 75%;
+        left: -160px;
+    }
+
+    #contact .contact-wrapper a {
+        padding: 7px;
+        height: 40px;
+        line-height: 1.8;
+
+    }
+    #contact .contact-wrapper a svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    #contact .contact-wrapper a span {
+        margin-right: 7px;
+    }
+
+    .project-box-wrapper .project-box, .excercise-box-wrapper .excercise-box {
         width: 380px;
         height: 650px;
     }
-    .project-box .img-wrapper {
+    .project-box-wrapper .project-box .img-wrapper, .excercise-box-wrapper .excercise-box .img-wrapper  {
         display: block;
         width: 100%;
         height: 30%;
 
     }
-    .project-box .img-wrapper img {
-        height: 50%;        
+    .project-box-wrapper .project-box .img-wrapper img, .excercise-box-wrapper .excercise-box .img-wrapper img {
+        height: 70%; 
+        width: auto;       
     }
-    .project-box .project-info {
+    .project-box-wrapper .project-box .project-info, .excercise-box-wrapper .excercise-box .excercise-info  {
         float: none;
         width: 100%;
         height: 70%;
@@ -112,6 +151,7 @@
     .close-project::after {
         transform: translateY(20px) rotateZ(-45deg);
     }
+
 }
 @media (max-width:640px){
     #home .title {
@@ -133,52 +173,59 @@
     .project, .project:nth-child(even) {
         width: 80vw;
         height: 54vw;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .projects-title, .projects-text {
+    .excercises-wrapper{
+        padding-left: 0;
+
+    }
+    #excercises .wrapper .excercises-wrapper .excercise {
+        display: block;
+        width: 80vw;
+        height: 54vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .excercise img {
+        width: 35%;
+    }
+    .excercise:hover img {
+        width: 40%;
+    }
+    #excercises .wrapper .excercises-wrapper .excercise svg {
+        display: inline-block;
+    } 
+    .projects-title, .projects-text, .excercise-title, .excercise-text {
         margin-left: 0;
     }
-    .projects-title {
+    .projects-title, .excercise-title  {
         font-size: 3rem;
     }
+    #contact {
+        display: none;
+    }
+}
 
     /*----*/
 
-    #excercises .excercise {
-        width: 380px;
-        height: 540px;
-        margin: 50px auto 30px auto;
-    }
-    #excercises .img-wrapper {
-        display: block;
-        width: 100%;
-        height: 40%;
 
-    }
-    #excercises .img-wrapper img {
-        width: 35%;        
-    }
-    #excercises .excercise-info {
-        width: 100%;
-        height: 60%;
-    }
+/* keyframes */
 
-    #excercises .excercise-buttons {
-        position: absolute;
-        top: initial;
-        right: initial;
-        bottom: -50px;
-    }
-
-    #excercises .excercise-button {
-        display: inline-block;
-        width: 80px;
-    }
-    #excercises .excercise-button svg {
-        display: inline-block;
-    }
-    #excercises .demo {
-        margin-right: 10px;
-
-    }
-}  
+@keyframes fromTop {
+    0% {transform: translateY(-100px);
+    opacity: 1;}
+    100% {transform: translateY(0px);}
+}
+@keyframes fromLeft {
+    0% {transform: translateX(-60px);}
+    100% {transform: translateX(0px);
+    opacity: 1;}
+}
+@keyframes fromRight {
+    0% {transform: translateX(60px);}
+    100% {transform: translateX(0);
+    opacity:1;}
+}
 

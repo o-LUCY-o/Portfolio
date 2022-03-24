@@ -1,4 +1,4 @@
-.project-box-wrapper {
+.excercise-box-wrapper {
     display: none;
     opacity:0;
     position: fixed;
@@ -12,7 +12,7 @@
 }
 
 
-.project-box{
+.excercise-box{
     display: block;
     position: fixed;
     top: 50%;
@@ -27,7 +27,7 @@
     transition: width .3s linear, height .3s linear;    
 
 }
-.close-project{
+/* make universal*/.close-project{
     display: block;
     position: absolute;
     top: 0;
@@ -37,7 +37,7 @@
     cursor: pointer;
     z-index: 99;
 }
-.close-project::before, .close-project::after {
+.close-excercise::before, .close-excercise::after {
     content: "";
     position: absolute;
     right: 10px;
@@ -46,14 +46,14 @@
     border-radius: 5px;
     background-color: #94a4b4;
 }
-.close-project::before {
+.close-excercise::before {
     transform: translateY(30px) rotateZ(45deg);
 }
-.close-project::after {
+.close-excercise::after {
     transform: translateY(30px) rotateZ(-45deg);
 }
 
-.project-box .img-wrapper {
+.excercise-box .img-wrapper {
     display: inline-block;
     position: relative;
 
@@ -62,7 +62,7 @@
 
     background-color: #222327;
 }
-.project-box .img-wrapper img {
+.excercise-box .img-wrapper img {
     position: absolute;
     width: 350px;
     height: auto;
@@ -71,7 +71,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.project-box .project-info {
+.excercise-box .excercise-info {
     position: relative;
 
     vertical-align: top;
@@ -82,7 +82,7 @@
 
     background-color: #343a41;
 }
-.project-title {
+.excercise-title {
     display: block;
     font-size: .9rem;
     font-weight: 550;
@@ -91,16 +91,16 @@
 
     margin: 3px 0 6px;
 }
-.project-name {
+.excercise-name {
     font-size: 1.5rem;
     letter-spacing: 2px;
 
 }
-.project-coding-lng{
+.excercise-coding-lng{
     padding: 5px 0;
     margin: 0;
 }
-.project-coding-lng  li {
+.excercise-coding-lng  li {
     display: inline-block;
     padding: 4px;
     border: #222327 1px solid;
@@ -112,7 +112,7 @@
     list-style-type: none;
 }
 
-.project-about-title {
+.excercise-about-title {
     display: block;
     font-size: .9rem;
     font-weight: 550;
@@ -122,7 +122,7 @@
     margin-top: 20px;
 
 }
-.project-about {
+.excercise-about {
     height: 50%;
     overflow-y: scroll;
 
@@ -134,10 +134,10 @@
     line-height: 1.5;
 
 }
-.project-about p {
+.excercise-about p {
 margin: 30px 15px 0 5px;
 }
-.project-button {
+.excercise-button {
 display: inline-block;
 width: 80px;
 height: 25px;
@@ -151,7 +151,7 @@ background-color: #d6d8d9;
 letter-spacing: 1px;
 
 }
-.project-button svg { /*possibly move code sign few milimetres down*/ /*eye is a bit chopped of?*/
+.excercise-button svg { /*possibly move code sign few milimetres down*/ /*eye is a bit chopped of?*/
     height: 13px;
     margin-right: 5px;
 }
@@ -159,7 +159,7 @@ letter-spacing: 1px;
     margin-right: 5px;
 }
 
-@keyframes projectBox {
+@keyframes excerciseBox {
     0% {
         opacity:0;
         transform: translate(-50%,-50%) scale(0.5);

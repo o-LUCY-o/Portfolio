@@ -27,6 +27,10 @@ body, html {
     font-family: RakeslyRg;
 }
 
+body::selection {
+    color: #23232b;
+    background: white;
+}
 
 #logo {
     display: block;
